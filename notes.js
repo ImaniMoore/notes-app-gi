@@ -29,6 +29,11 @@ const removeNote = (title) => {
   }
 };
 
+const removeAllNotes = () => {
+  saveNotes([]);
+  console.log(chalk.green.inverse("All notes removed!"));
+};
+
 const listNotes = () => {
   const notes = loadNotes();
 
@@ -46,6 +51,20 @@ const readNote = (title) => {
   if (note) {
     console.log(chalk.inverse(note.title));
     console.log(note.body);
+  } else {
+    console.log(chalk.red.inverse("Note not found!"));
+  }
+};
+
+const editNote = (title, newBody) => {
+  const notes = loadNotes();
+  const noteIndex = notes.findIndex((note) => note.title === title);
+
+  if (noteIndex !== -1) {
+    // check if note exists since -1 means not found when using findIndex()
+    notes[noteIndex].body = newBody;
+    saveNotes(notes);
+    console.log(chalk.green.inverse("Note updated!"));
   } else {
     console.log(chalk.red.inverse("Note not found!"));
   }
@@ -71,4 +90,6 @@ module.exports = {
   removeNote: removeNote,
   listNotes: listNotes,
   readNote: readNote,
+  removeAllNotes: removeAllNotes,
+  editNote: editNote,
 };

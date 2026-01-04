@@ -42,6 +42,34 @@ yargs.command({
   },
 });
 
+yargs.command({
+  command: "remove-all",
+  describe: "Remove all notes",
+  handler() {
+    notes.removeAllNotes();
+  },
+});
+
+yargs.command({
+  command: "edit",
+  describe: "Edit a note",
+  builder: {
+    title: {
+      describe: "Note title",
+      demandOption: true,
+      type: "string",
+    },
+    body: {
+      describe: "New note body",
+      demandOption: true,
+      type: "string",
+    },
+  },
+  handler(argv) {
+    notes.editNote(argv.title, argv.body);
+  },
+});
+
 // Create list command
 yargs.command({
   command: "list",

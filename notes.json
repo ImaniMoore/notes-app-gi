@@ -1,9 +1,6 @@
 [
-  { "title": "t", "body": "b" },
+  { "title": "t", "body": "edited note" },
   { "title": "Course ideas", "body": "" },
   { "title": "Testing", "body": "Testing Body" },
-  {
-    "title": "This Works",
-    "body": "This is working"
-  }
+  { "title": "This Works", "body": "This is working" }
 ]
