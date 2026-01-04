@@ -1,0 +1,25 @@
+{
+  "name": "notes-app-gi",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ImaniMoore/notes-app-gi#readme",
+  "bugs": {
+    "url": "https://github.com/ImaniMoore/notes-app-gi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImaniMoore/notes-app-gi.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "validator": "^10.8.0",
+    "yargs": "^12.0.2"
+  }
+}
